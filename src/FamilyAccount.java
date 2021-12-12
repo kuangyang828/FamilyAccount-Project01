@@ -3,6 +3,8 @@ public class FamilyAccount {
         boolean isFlag = true;
         //初始金额10000
         int balance = 10000;
+        //用于记录用户收入和支出详情
+        String details = "收支\t\t账户金额\t\t收支金额\t\t说 明";
         while (isFlag) {
             System.out.println("-----------------家庭收支记账软件-----------------\n");
             System.out.println("                   1.收支明细");
@@ -13,7 +15,9 @@ public class FamilyAccount {
             char selection = Utility.readMenuSelection();
             switch (selection) {
                 case '1':
-                    System.out.println("收支明细");
+                    System.out.println("-----------------当前收支明细记录-----------------");
+                    System.out.println(details);
+                    System.out.println("-----------------------------------------------");
                     break;
                 case '2':
                     System.out.println("登记收入");
